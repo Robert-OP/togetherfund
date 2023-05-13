@@ -66,10 +66,6 @@ function App() {
     })
   }
 
-  
-
-  console.log(dashboard);
-
   return (
     <div>
       <AppBar position="static">
