@@ -43,6 +43,8 @@ function App() {
     savingLives: 0,
   });
 
+  const { dashboard, endingHunger, changingLives, savingLives } = state;
+
   const handleChange = (event) => {
     setState({
       ...state,
@@ -56,14 +58,20 @@ function App() {
       ...state,
       dashboard: true
     })
+    setProgress({
+      ...state,
+      endingHunger: endingHunger ? 100 : 0,
+      changingLives: changingLives ? 100 : 0,
+      savingLives: savingLives ? 100 : 0,
+    })
   }
 
-  const { dashboard, endingHunger, changingLives, savingLives } = state;
+  
 
   console.log(dashboard);
 
   return (
-    <div className="App">
+    <div>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -115,7 +123,7 @@ function App() {
           </Box>
         ) 
         : (
-<FormControl sx={{ m: 6 }} component="fieldset" variant="standard">
+      <FormControl sx={{ m: 6 }} component="fieldset" variant="standard">
         <FormLabel component="legend">Choose initiatives to support:</FormLabel>
         <FormGroup>
           <FormControlLabel
@@ -124,18 +132,27 @@ function App() {
             }
             label="Ending Hunger"
           />
+          <Typography variant="body2" component="div">
+            Ending world hunger is one of the greatest challenges of our times. Across the globe, up to 828 million people do not have enough food and nearly 43.3 million people are at serious risk of famine
+          </Typography>
           <FormControlLabel
             control={
               <Checkbox checked={changingLives} onChange={handleChange} name="changingLives" size='large' />
             }
             label="Changing Lives"
           />
+          <Typography variant="body2" component="div">
+            Your donation will assist millions of people displaced, rendered homeless or deprived of basic resources by cataclysmic events, whether man-made or natural, avoidable or not
+          </Typography>
           <FormControlLabel
             control={
               <Checkbox checked={savingLives} onChange={handleChange} name="savingLives" size='large' />
             }
             label="Saving Lives"
           />
+          <Typography variant="body2" component="div">
+            Emergencies are described as “urgent situations in which there is clear evidence that an event, or series of events, has occurred which causes human suffering or imminently threatens lives or livelihoods
+          </Typography>
         </FormGroup>
         </FormControl>
         ) 
