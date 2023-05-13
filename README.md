@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# TogetherFund - World Food Program - Netlight hackathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Ending - Ending world hunger is one of the greatest challenges of our times. Across the globe, up to 828 million people do not have enough food and nearly 43.3 million people are at serious risk of famine
+
+- Changing Lives - Your donation will assist millions of people displaced, rendered homeless or deprived of basic resources by cataclysmic events, whether man-made or natural, avoidable or not 
+
+- Saving Lives - Emergencies are described as “urgent situations in which there is clear evidence that an event, or series of events, has occurred which causes human suffering or imminently threatens lives or livelihoods
 
 ## Available Scripts
 
